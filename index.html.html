@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>Prof. (Dr.) Ajay Shriram Kushwaha — World Academic Portfolio</title>
+<meta name="description" content="Prof. (Dr.) Ajay Shriram Kushwaha — Deputy HoD & Professor at Sharda University. Cybersecurity, Blockchain, AI/ML researcher. 75+ publications, 18 patents, 257 citations."/>
+<meta property="og:title" content="Prof. (Dr.) Ajay Shriram Kushwaha — World Academic Portfolio"/>
+<meta property="og:description" content="Deputy HoD & Professor · Network & Cyber Security · Blockchain · AI/ML · 75+ Publications · 18 Patents · 257 Citations"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔐</text></svg>"/>
+<style>
+:root{
+  --bg:#0a0a0f;--bg2:#111118;--bg3:#1a1a26;
+  --gold:#f59e0b;--gold2:#fbbf24;--gold3:#fde68a;
+  --text:#e8e8f0;--text2:#a0a0b8;--text3:#6b6b88;
+  --border:#2a2a3a;--border2:#3a3a50;
+  --green:#10b981;--blue:#3b82f6;--red:#ef4444;--purple:#8b5cf6;
+  --card:#13131e;--card2:#1c1c2c;
+  --radius:12px;--shadow:0 4px 24px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg2)}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
+
+/* ── TICKER ── */
+.ticker-wrap{background:#050508;border-bottom:1px solid var(--border);padding:10px 0;overflow:hidden;position:sticky;top:0;z-index:1000}
+.ticker{display:flex;animation:ticker 55s linear infinite;white-space:nowrap;gap:0}
+.ticker span{padding:0 40px;color:var(--gold);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.ticker span::before{content:'◆ ';opacity:.6}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ── NAV ── */
+nav{background:rgba(10,10,15,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:41px;z-index:999}
+.nav-brand{color:var(--gold);font-weight:700;font-size:.95rem;letter-spacing:.02em}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{color:var(--text2);text-decoration:none;font-size:.82rem;font-weight:500;transition:color .2s;letter-spacing:.03em}
+.nav-links a:hover{color:var(--gold)}
+.nav-toggle{display:none;background:none;border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:6px;cursor:pointer;font-size:1rem}
+@media(max-width:768px){.nav-links{display:none}.nav-toggle{display:block}}
+
+/* ── HERO ── */
+.hero{min-height:92vh;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding:80px 8%;background:radial-gradient(ellipse 80% 60% at 70% 50%,rgba(245,158,11,.07) 0%,transparent 70%)}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);border-radius:30px;padding:6px 16px;font-size:.75rem;color:var(--gold);font-weight:600;letter-spacing:.06em;margin-bottom:24px}
+.hero-badge span{width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.3)}}
+.hero h1{font-size:clamp(2rem,4vw,3.2rem);font-weight:800;line-height:1.1;margin-bottom:8px}
+.hero h1 em{color:var(--gold);font-style:normal}
+.hero-sub{color:var(--text2);font-size:.95rem;margin-bottom:12px;font-weight:500}
+.hero-desc{color:var(--text2);font-size:.9rem;line-height:1.8;max-width:520px;margin-bottom:32px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px}
+.tag{background:rgba(255,255,255,.04);border:1px solid var(--border);padding:5px 12px;border-radius:20px;font-size:.75rem;color:var(--text2)}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:11px 24px;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;text-decoration:none;transition:all .2s;border:none;display:inline-flex;align-items:center;gap:8px}
+.btn-gold{background:var(--gold);color:#000}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--text);border:1px solid var(--border2)}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.hero-stats{display:flex;gap:32px;margin-top:40px}
+.hs{text-align:center}
+.hs-num{font-size:1.8rem;font-weight:800;color:var(--gold)}
+.hs-label{font-size:.7rem;color:var(--text3);text-transform:uppercase;letter-spacing:.06em}
+.hero-img-wrap{position:relative;display:flex;justify-content:center;align-items:center}
+.hero-img-wrap::before{content:'';position:absolute;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,.15),transparent 70%);animation:glow 4s ease-in-out infinite alternate}
+@keyframes glow{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.1);opacity:1}}
+.avatar{width:260px;height:260px;border-radius:50%;object-fit:cover;border:4px solid var(--gold);position:relative;z-index:1;box-shadow:0 0 40px rgba(245,158,11,.3)}
+.avatar-placeholder{width:260px;height:260px;border-radius:50%;background:var(--bg3);border:4px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:5rem;position:relative;z-index:1}
+@media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center}.hero-img-wrap{order:-1}.hero-stats{justify-content:center}.hero-btns{justify-content:center}.hero-tags{justify-content:center}}
+
+/* ── SECTION ── */
+section{padding:80px 8%}
+.sec-label{font-size:.72rem;color:var(--gold);font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.sec-title{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;margin-bottom:8px}
+.sec-sub{color:var(--text2);font-size:.9rem;max-width:680px}
+.sec-head{margin-bottom:48px}
+
+/* ── DASHBOARD ── */
+#dashboard{background:var(--bg2)}
+.metrics-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.metric-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px 20px;transition:border-color .2s,transform .2s}
+.metric-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.metric-icon{font-size:1.6rem;margin-bottom:12px}
+.metric-num{font-size:2.2rem;font-weight:800;color:var(--gold);line-height:1}
+.metric-label{color:var(--text);font-size:.85rem;font-weight:600;margin:6px 0 4px}
+.metric-sub{color:var(--text3);font-size:.75rem}
+.platform-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-top:40px}
+.platform-card{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:16px;display:flex;align-items:center;gap:12px}
+.platform-icon{font-size:1.4rem}
+.platform-num{font-size:1.1rem;font-weight:700;color:var(--text)}
+.platform-name{font-size:.72rem;color:var(--text3)}
+
+/* ── TIMELINE ── */
+#timeline{position:relative}
+.timeline{position:relative;padding-left:40px}
+.timeline::before{content:'';position:absolute;left:15px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--gold),transparent)}
+.tl-item{position:relative;margin-bottom:48px}
+.tl-dot{position:absolute;left:-32px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--gold);border:3px solid var(--bg);box-shadow:0 0 12px rgba(245,158,11,.5)}
+.tl-year{font-size:.75rem;color:var(--gold);font-weight:700;letter-spacing:.08em;margin-bottom:4px}
+.tl-inst{font-size:.8rem;color:var(--text3);margin-bottom:8px}
+.tl-title{font-size:1rem;font-weight:700;margin-bottom:6px}
+.tl-body{color:var(--text2);font-size:.85rem;line-height:1.7}
+.tl-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tl-tag{background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);padding:3px 10px;border-radius:12px;font-size:.7rem;color:var(--gold)}
+
+/* ── PUBLICATIONS ── */
+#research{background:var(--bg2)}
+.pub-filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.pf{padding:6px 14px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--text2);font-size:.75rem;cursor:pointer;transition:all .2s}
+.pf.active,.pf:hover{background:var(--gold);color:#000;border-color:var(--gold)}
+.pub-table{width:100%;border-collapse:collapse;font-size:.82rem}
+.pub-table th{background:var(--bg3);color:var(--text2);padding:10px 14px;text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--border)}
+.pub-table td{padding:12px 14px;border-bottom:1px solid var(--border);vertical-align:top}
+.pub-table tr:hover td{background:rgba(245,158,11,.04)}
+.pub-year{color:var(--text3);font-weight:600;white-space:nowrap}
+.pub-title a{color:var(--text);text-decoration:none;font-weight:500}
+.pub-title a:hover{color:var(--gold)}
+.pub-venue{color:var(--text2);font-size:.78rem;margin-top:3px}
+.badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.65rem;font-weight:700;letter-spacing:.05em}
+.badge-ieee{background:rgba(59,130,246,.15);color:#60a5fa;border:1px solid rgba(59,130,246,.3)}
+.badge-nature{background:rgba(16,185,129,.15);color:#34d399;border:1px solid rgba(16,185,129,.3)}
+.badge-springer{background:rgba(139,92,246,.15);color:#a78bfa;border:1px solid rgba(139,92,246,.3)}
+.badge-scopus{background:rgba(245,158,11,.15);color:var(--gold);border:1px solid rgba(245,158,11,.3)}
+.badge-mdpi{background:rgba(236,72,153,.15);color:#f472b6;border:1px solid rgba(236,72,153,.3)}
+.badge-indexed{background:rgba(107,114,128,.15);color:#9ca3af;border:1px solid rgba(107,114,128,.3)}
+.badge-chapter{background:rgba(245,101,101,.15);color:#fc8181;border:1px solid rgba(245,101,101,.3)}
+
+/* ── PATENTS ── */
+.patent-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+.patent-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:all .2s;position:relative;overflow:hidden}
+.patent-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold)}
+.patent-card.granted::before{background:var(--green)}
+.patent-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.pat-status{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;font-weight:700;padding:4px 10px;border-radius:20px;margin-bottom:12px}
+.pat-status.granted{background:rgba(16,185,129,.15);color:var(--green);border:1px solid rgba(16,185,129,.3)}
+.pat-status.published{background:rgba(245,158,11,.12);color:var(--gold);border:1px solid rgba(245,158,11,.3)}
+.pat-country{font-size:1.1rem;margin-right:4px}
+.pat-title{font-size:.9rem;font-weight:600;margin-bottom:12px;line-height:1.4}
+.pat-num{font-size:.75rem;color:var(--text3);margin-bottom:4px}
+.pat-date{font-size:.75rem;color:var(--text2)}
+.patent-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-align:center}
+.ps-num{font-size:2rem;font-weight:800;color:var(--gold)}
+.ps-label{font-size:.72rem;color:var(--text3);margin-top:4px}
+
+/* ── COPYRIGHT ── */
+#copyright{background:var(--bg2)}
+.copy-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:20px}
+.copy-card{background:var(--card);border:1px solid rgba(139,92,246,.3);border-radius:var(--radius);padding:24px;position:relative;overflow:hidden}
+.copy-card::before{content:'©';position:absolute;right:20px;top:16px;font-size:3rem;color:rgba(139,92,246,.1);font-weight:900}
+.copy-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(139,92,246,.15);color:#a78bfa;border:1px solid rgba(139,92,246,.3);padding:4px 12px;border-radius:20px;font-size:.7rem;font-weight:700;margin-bottom:14px}
+.copy-title{font-size:.9rem;font-weight:600;line-height:1.5;margin-bottom:12px}
+.copy-meta{font-size:.75rem;color:var(--text3)}
+.copy-meta span{color:var(--text2)}
+
+/* ── BOOKS ── */
+.books-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.book-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px;transition:all .2s;display:flex;flex-direction:column}
+.book-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.book-emoji{font-size:2rem;margin-bottom:12px}
+.book-badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.65rem;font-weight:700;background:rgba(245,158,11,.15);color:var(--gold);border:1px solid rgba(245,158,11,.3);margin-bottom:8px}
+.book-title{font-size:.88rem;font-weight:700;line-height:1.4;margin-bottom:6px}
+.book-desc{font-size:.77rem;color:var(--text2);flex:1;line-height:1.6;margin-bottom:12px}
+.book-pub{font-size:.72rem;color:var(--text3);margin-bottom:4px}
+.book-isbn{font-size:.7rem;color:var(--text3)}
+.book-link{display:inline-flex;align-items:center;gap:6px;color:var(--gold);font-size:.75rem;font-weight:600;text-decoration:none;margin-top:12px;padding:6px 12px;border:1px solid rgba(245,158,11,.3);border-radius:6px;transition:all .2s}
+.book-link:hover{background:rgba(245,158,11,.1)}
+.books-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:36px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-align:center}
+@media(max-width:600px){.books-stats{grid-template-columns:repeat(3,1fr)}}
+
+/* ── GLOBAL ── */
+#global{background:var(--bg2)}
+.global-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:40px}
+@media(max-width:768px){.global-grid{grid-template-columns:1fr}}
+.country-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;display:flex;gap:14px;align-items:flex-start}
+.cc-flag{font-size:2rem}
+.cc-title{font-size:.88rem;font-weight:700;margin-bottom:4px}
+.cc-body{font-size:.78rem;color:var(--text2);line-height:1.6}
+.conf-countries{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:20px;margin-top:32px}
+.conf-countries h4{color:var(--gold);font-size:.8rem;margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em}
+.conf-countries p{font-size:.82rem;color:var(--text2);line-height:1.8}
+
+/* ── MEDIA ── */
+.media-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.media-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:8px;transition:border-color .2s}
+.media-card:hover{border-color:var(--gold)}
+.media-cat{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700}
+.media-icon{font-size:1.5rem}
+.media-title{font-size:.88rem;font-weight:600}
+.media-body{font-size:.78rem;color:var(--text2);line-height:1.6;flex:1}
+.media-meta{font-size:.7rem;color:var(--text3)}
+.media-link{display:inline-flex;align-items:center;gap:6px;color:var(--gold);font-size:.75rem;font-weight:600;text-decoration:none;margin-top:8px;padding:5px 12px;border:1px solid rgba(245,158,11,.3);border-radius:6px;width:fit-content;transition:all .2s}
+.media-link:hover{background:rgba(245,158,11,.1)}
+
+/* ── TESTIMONIALS ── */
+#testimonials{background:var(--bg2)}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
+.testi-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;position:relative}
+.testi-card::before{content:'"';position:absolute;top:16px;left:20px;font-size:4rem;color:rgba(245,158,11,.15);font-family:serif;line-height:1}
+.testi-body{font-size:.85rem;color:var(--text2);line-height:1.8;margin-bottom:20px;padding-top:16px;font-style:italic}
+.testi-name{font-size:.85rem;font-weight:700}
+.testi-role{font-size:.75rem;color:var(--text3);margin-top:2px}
+
+/* ── CONTACT ── */
+.contact-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:48px;align-items:start}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+.contact-info{display:flex;flex-direction:column;gap:16px}
+.ci-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;display:flex;gap:14px;align-items:flex-start}
+.ci-icon{font-size:1.3rem;margin-top:2px}
+.ci-label{font-size:.7rem;color:var(--text3);margin-bottom:3px;text-transform:uppercase;letter-spacing:.06em}
+.ci-val{font-size:.85rem;color:var(--text);font-weight:500}
+.social-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.sl{display:inline-flex;align-items:center;gap:6px;background:var(--card2);border:1px solid var(--border);padding:7px 14px;border-radius:8px;text-decoration:none;color:var(--text2);font-size:.75rem;font-weight:500;transition:all .2s}
+.sl:hover{border-color:var(--gold);color:var(--gold)}
+.contact-form{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:32px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+@media(max-width:600px){.form-row{grid-template-columns:1fr}}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.form-group label{font-size:.78rem;color:var(--text2);font-weight:500}
+.form-group input,.form-group textarea,.form-group select{background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:10px 14px;color:var(--text);font-size:.85rem;outline:none;transition:border-color .2s;font-family:inherit}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--gold)}
+.form-group textarea{min-height:120px;resize:vertical}
+.form-group select option{background:var(--bg3)}
+
+/* ── FOOTER ── */
+footer{background:#050508;border-top:1px solid var(--border);padding:40px 8%;text-align:center}
+.footer-name{font-size:1.1rem;font-weight:700;color:var(--gold);margin-bottom:6px}
+.footer-role{font-size:.8rem;color:var(--text2);margin-bottom:20px}
+.footer-links{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:20px}
+.footer-links a{color:var(--text3);font-size:.75rem;text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--gold)}
+.footer-copy{font-size:.72rem;color:var(--text3)}
+
+/* ── UTILITY ── */
+.gold{color:var(--gold)}
+.divider{height:1px;background:var(--border);margin:40px 0}
+.chart-bar-wrap{margin-top:32px}
+.chart-bar-row{display:flex;align-items:center;gap:16px;margin-bottom:10px}
+.chart-year{font-size:.72rem;color:var(--text3);width:32px;flex-shrink:0}
+.chart-bar{height:24px;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:4px;transition:width 1.5s ease;min-width:4px;display:flex;align-items:center;padding-left:8px}
+.chart-val{font-size:.7rem;color:#000;font-weight:700}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker" id="ticker">
+    <span>75+ RESEARCH PUBLICATIONS (IEEE · SPRINGER · ELSEVIER · NATURE · MDPI · WILEY)</span>
+    <span>257 CITATIONS · H-INDEX: 9 · i10-INDEX: 9 (GOOGLE SCHOLAR)</span>
+    <span>527 CITATIONS · 9,679 READS (RESEARCHGATE — LIVE OCT 2026)</span>
+    <span>18 PATENTS FILED (INDIA + UK) — 3 GRANTED</span>
+    <span>2 COPYRIGHT REGISTRATIONS (GOVT. OF INDIA — 2026)</span>
+    <span>DEPUTY HoD & PROFESSOR · SHARDA UNIVERSITY · GREATER NOIDA</span>
+    <span>EDITOR-IN-CHIEF: BENTHAM SCIENCE PUBLICATIONS, SINGAPORE</span>
+    <span>56+ EXPERT TALKS · WEBINARS · FDP SESSIONS GLOBALLY</span>
+    <span>7+ INTERNATIONAL JOURNAL EDITORIAL BOARDS</span>
+    <span>ICRDSTEM-2023 | ICAAAIML-2025 | ICCISD-2026 | ICCTDN-2026 ORGANIZER</span>
+    <span>IEEE SENIOR MEMBER · BOMBAY SECTION #92583793</span>
+    <span>18.2 YEARS ACADEMIC EXCELLENCE · PhD (CS&IT) NAGPUR UNIVERSITY</span>
+    <span>M.E. CSE · ANNAMALAI UNIVERSITY · CGPA 8.32 · FIRST CLASS</span>
+    <span>12 AUTHORED BOOKS — NATIONAL & INTERNATIONAL</span>
+    <span>3 PhD SCHOLARS GUIDED TO COMPLETION · 4 ACTIVE SCHOLARS</span>
+    <span>75+ RESEARCH PUBLICATIONS (IEEE · SPRINGER · ELSEVIER · NATURE · MDPI · WILEY)</span>
+    <span>257 CITATIONS · H-INDEX: 9 · i10-INDEX: 9 (GOOGLE SCHOLAR)</span>
+    <span>527 CITATIONS · 9,679 READS (RESEARCHGATE — LIVE OCT 2026)</span>
+    <span>18 PATENTS FILED (INDIA + UK) — 3 GRANTED</span>
+    <span>2 COPYRIGHT REGISTRATIONS (GOVT. OF INDIA — 2026)</span>
+    <span>DEPUTY HoD & PROFESSOR · SHARDA UNIVERSITY · GREATER NOIDA</span>
+    <span>EDITOR-IN-CHIEF: BENTHAM SCIENCE PUBLICATIONS, SINGAPORE</span>
+    <span>56+ EXPERT TALKS · WEBINARS · FDP SESSIONS GLOBALLY</span>
+    <span>7+ INTERNATIONAL JOURNAL EDITORIAL BOARDS</span>
+    <span>ICRDSTEM-2023 | ICAAAIML-2025 | ICCISD-2026 | ICCTDN-2026 ORGANIZER</span>
+    <span>IEEE SENIOR MEMBER · BOMBAY SECTION #92583793</span>
+    <span>18.2 YEARS ACADEMIC EXCELLENCE · PhD (CS&IT) NAGPUR UNIVERSITY</span>
+    <span>M.E. CSE · ANNAMALAI UNIVERSITY · CGPA 8.32 · FIRST CLASS</span>
+    <span>12 AUTHORED BOOKS — NATIONAL & INTERNATIONAL</span>
+    <span>3 PhD SCHOLARS GUIDED TO COMPLETION · 4 ACTIVE SCHOLARS</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">🌐 Prof. (Dr.) A. S. Kushwaha</div>
+  <ul class="nav-links">
+    <li><a href="#dashboard">Metrics</a></li>
+    <li><a href="#timeline">Journey</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#patents">Patents</a></li>
+    <li><a href="#copyright">Copyrights</a></li>
+    <li><a href="#books">Books</a></li>
+    <li><a href="#global">World</a></li>
+    <li><a href="#media">Media</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-toggle">☰</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div>
+    <div class="hero-badge"><span></span>Deputy HoD & Professor · Active Researcher · Oct 2026</div>
+    <h1>Prof. (Dr.)<br/><em>Ajay Shriram</em><br/>Kushwaha</h1>
+    <p class="hero-sub">Professor · Network & Cyber Security · Digital Forensics · Blockchain · Patent Holder · Editor-in-Chief</p>
+    <p class="hero-desc">A distinguished academic and researcher with <strong>18.2 years</strong> of impact across network & cyber security, digital forensics, blockchain, AI/ML, and quantum computing. PhD (CS&IT) from Nagpur University · M.E. CSE (CGPA 8.32, First Class) from Annamalai University. Currently Deputy HoD & Professor at Sharda University, Greater Noida — shaping the next generation of technologists from Maharashtra to the world stage.</p>
+    <div class="hero-tags">
+      <span class="tag">🔐 Cybersecurity</span>
+      <span class="tag">⛓️ Blockchain</span>
+      <span class="tag">🔬 Digital Forensics</span>
+      <span class="tag">🤖 AI & ML</span>
+      <span class="tag">⚛️ Quantum Computing</span>
+      <span class="tag">☁️ Cloud & IoT</span>
+      <span class="tag">🧠 Agentic AI</span>
+    </div>
+    <div class="hero-btns">
+      <a href="#contact" class="btn btn-gold">Collaborate With Me →</a>
+      <a href="#research" class="btn btn-outline">View Research ↓</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hs"><div class="hs-num">18.2</div><div class="hs-label">Yrs Academic</div></div>
+      <div class="hs"><div class="hs-num">75+</div><div class="hs-label">Publications</div></div>
+      <div class="hs"><div class="hs-num">18</div><div class="hs-label">Patents Filed</div></div>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <div class="avatar-placeholder">👤</div>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard">
+  <div class="sec-head">
+    <div class="sec-label">Live Research Dashboard</div>
+    <h2 class="sec-title">Impact at a Glance</h2>
+    <p class="sec-sub">Real-time academic metrics aggregated from Google Scholar, ResearchGate, Scopus, Web of Science, LinkedIn and verified sources. Last updated: October 2026.</p>
+  </div>
+  <div class="metrics-grid">
+    <div class="metric-card"><div class="metric-icon">📄</div><div class="metric-num counter" data-target="75">0</div><div class="metric-label">Total Publications</div><div class="metric-sub">IEEE · Springer · Nature · Elsevier · MDPI</div></div>
+    <div class="metric-card"><div class="metric-icon">🔗</div><div class="metric-num counter" data-target="257">0</div><div class="metric-label">Citations (Google Scholar)</div><div class="metric-sub">h-index: 9 · i10-index: 9</div></div>
+    <div class="metric-card"><div class="metric-icon">👁️</div><div class="metric-num" style="font-size:1.6rem">9,679</div><div class="metric-label">Research Reads</div><div class="metric-sub">ResearchGate · 527 RG Citations</div></div>
+    <div class="metric-card"><div class="metric-icon">⚖️</div><div class="metric-num counter" data-target="18">0</div><div class="metric-label">Patents Filed</div><div class="metric-sub">3 Granted · India + UK</div></div>
+    <div class="metric-card"><div class="metric-icon">©️</div><div class="metric-num counter" data-target="2">0</div><div class="metric-label">Copyrights Registered</div><div class="metric-sub">Govt. of India · 2026</div></div>
+    <div class="metric-card"><div class="metric-icon">🎓</div><div class="metric-num counter" data-target="10">0</div><div class="metric-label">Certifications</div><div class="metric-sub">Coursera · LinkedIn · IIT Bombay</div></div>
+    <div class="metric-card"><div class="metric-icon">🎤</div><div class="metric-num counter" data-target="56">0</div><div class="metric-label">Expert Talks / FDPs</div><div class="metric-sub">National & International</div></div>
+    <div class="metric-card"><div class="metric-icon">📰</div><div class="metric-num counter" data-target="7">0</div><div class="metric-label">Journal Editorships</div><div class="metric-sub">Editor-in-Chief · Board Member</div></div>
+    <div class="metric-card"><div class="metric-icon">🌐</div><div class="metric-num counter" data-target="6">0</div><div class="metric-label">Int'l Conferences Organized</div><div class="metric-sub">10+ Countries Participation</div></div>
+    <div class="metric-card"><div class="metric-icon">🏅</div><div class="metric-num counter" data-target="7">0</div><div class="metric-label">PhD Scholars Guided</div><div class="metric-sub">3 Awarded · 4 Active</div></div>
+    <div class="metric-card"><div class="metric-icon">🏛️</div><div class="metric-num counter" data-target="6">0</div><div class="metric-label">Universities Served</div><div class="metric-sub">MH · Punjab · Karnataka · UP</div></div>
+    <div class="metric-card"><div class="metric-icon">📚</div><div class="metric-num counter" data-target="12">0</div><div class="metric-label">Books Authored</div><div class="metric-sub">National & International</div></div>
+    <div class="metric-card"><div class="metric-icon">🤝</div><div class="metric-num counter" data-target="4">0</div><div class="metric-label">Professional Memberships</div><div class="metric-sub">IEEE · IAENG · AACST · ISCA</div></div>
+    <div class="metric-card"><div class="metric-icon">📅</div><div class="metric-num" style="font-size:1.6rem">18.2</div><div class="metric-label">Years of Experience</div><div class="metric-sub">Teaching 17.2 · Research 14.0 · Industry 1.1</div></div>
+  </div>
+
+  <div class="divider"></div>
+  <h3 style="font-size:1rem;color:var(--text2);margin-bottom:20px;font-weight:600">Platform Presence</h3>
+  <div class="platform-row">
+    <div class="platform-card"><div class="platform-icon">🎓</div><div><div class="platform-num">257 cit.</div><div class="platform-name">Google Scholar · h-9 · i10-9</div></div></div>
+    <div class="platform-card"><div class="platform-icon">🔬</div><div><div class="platform-num">527 cit.</div><div class="platform-name">ResearchGate · 9,679 Reads</div></div></div>
+    <div class="platform-card"><div class="platform-icon">📊</div><div><div class="platform-num">57212812452</div><div class="platform-name">Scopus Author ID</div></div></div>
+    <div class="platform-card"><div class="platform-icon">⚡</div><div><div class="platform-num">5+ Papers</div><div class="platform-name">IEEE Xplore</div></div></div>
+    <div class="platform-card"><div class="platform-icon">🌿</div><div><div class="platform-num">8+ Papers</div><div class="platform-name">SpringerLink</div></div></div>
+    <div class="platform-card"><div class="platform-icon">📈</div><div><div class="platform-num">8+ Papers</div><div class="platform-name">MDPI / Open Access</div></div></div>
+  </div>
+
+  <div class="divider"></div>
+  <h3 style="font-size:1rem;color:var(--text2);margin-bottom:20px;font-weight:600">Citation Growth · 2016 – 2026 (Google Scholar)</h3>
+  <div class="chart-bar-wrap">
+    <div class="chart-bar-row"><span class="chart-year">2016</span><div class="chart-bar" style="width:3%"><span class="chart-val">5</span></div></div>
+    <div class="chart-bar-row"><span class="chart-year">2017</span><div class="chart-bar" style="width:6%"><span class="chart-val">12</span></div></div>
+    <div class="chart-bar-row"><span class="chart-year">2018</span><div class="chart-bar" style="width:12%"><span class="chart-val">24</span></div></div>
+    <div class="chart-bar-row"><span class="chart-year">2019</span><div class="chart-bar" style="width:18%"><span class="chart-val">35</span></div></div>
+    <div class="chart-bar-row"><span class="chart-year">2020</span><div class="chart-bar" style="width:22%"><span class="chart-val">42</span></div></div>
+    <div class="chart-bar-row"><span class="chart-year">2021</span><div class="chart-bar" style="width:34%"><span class="chart-val">66</span></div></div>
+    <div class="chart-bar-row"><span class="chart-year">2022</span><div class="chart-bar" style="width:55%"><span class="chart-val">107</span></div></div>
+    <div class="chart-bar-row"><span class="chart-year">2023</span><div class="chart-bar" style="width:71%"><span class="chart-val">138</span></div></div>
+    <div class="chart-bar-row"><span class="chart-year">2024</span><div class="chart-bar" style="width:88%"><span class="chart-val">171</span></div></div>
+    <div class="chart-bar-row"><span class="chart-year">2025</span><div class="chart-bar" style="width:100%"><span class="chart-val">222</span></div></div>
+    <div class="chart-bar-row"><span class="chart-year">2026</span><div class="chart-bar" style="width:100%;background:linear-gradient(90deg,var(--green),#34d399)"><span class="chart-val">257+</span></div></div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="sec-head">
+    <div class="sec-label">17-Year Academic Journey</div>
+    <h2 class="sec-title">Career Timeline</h2>
+    <p class="sec-sub">From the heartland of Maharashtra to the global research stage — every chapter shaped by relentless curiosity.</p>
+  </div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2008 · Global Systems (Part-time) · Chandrapur, MH</div>
+      <div class="tl-title">System Administrator — Industry Experience</div>
+      <p class="tl-body">Industry start as System Administrator while completing MCA + PGDCLIT (Cyber Law). Managed systems, networks and IT infrastructure. Gained 1+ year of industry experience that shaped a practical approach to teaching security.</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2009 · Sardar Patel College · Chandrapur, MH</div>
+      <div class="tl-title">Senior Lecturer — Teaching Career Begins</div>
+      <p class="tl-body">Began full-time teaching career. Taught BCA/MCA students in Computer Applications, Network Security, Digital Forensics. Supervised YCMOU examinations. Won the <strong>Best Teacher Award 2011</strong>.</p>
+      <div class="tl-tags"><span class="tl-tag">🏆 Best Teacher 2011</span><span class="tl-tag">YCMOU Supervisor</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2009–2011 · Annamalai University · Chidambaram, Tamil Nadu</div>
+      <div class="tl-title">M.E. Computer Science & Engineering — CGPA 8.32 · First Class</div>
+      <p class="tl-body">Completed Master of Engineering in CSE via distance mode while teaching full-time. Reg. No.: 2009198318. Subjects included Machine Learning, Wireless Sensor Networks, Embedded IoT, Big Data Analytics (S Grade — 90+), and Knowledge-Based Systems. Semester progression: 7.27 → 7.55 → 8.05 → 9.0 (Final CGPA: 8.32). Project Work Phase-II: S Grade (90+).</p>
+      <div class="tl-tags"><span class="tl-tag">CGPA 8.32 / 10.00</span><span class="tl-tag">First Class</span><span class="tl-tag">May 2011</span><span class="tl-tag">Annamalai University</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2012 · Sardar Patel College / Anveshna Competition · MH</div>
+      <div class="tl-title">Innovation Award + HoD Role Begins</div>
+      <p class="tl-body">Won the <strong>Best Innovation Award</strong> at Anveshna State-Level Science & Technology Competition. Joined Ballarpur Institute of Technology as Head of Department, MCA. Led curriculum design and academic operations.</p>
+      <div class="tl-tags"><span class="tl-tag">🏅 Best Innovation 2012</span><span class="tl-tag">HoD · MCA Dept</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2014 · IEEE CICN Conference · Gondwana University</div>
+      <div class="tl-title">First International IEEE Conference Paper</div>
+      <p class="tl-body">Presented "Designing an Enhanced Selective Encryption Method for Securing Mobile Adhoc Network" at IEEE CICN 2014 — marking debut in international academic publishing.</p>
+      <div class="tl-tags"><span class="tl-tag">IEEE Publication</span><span class="tl-tag">MANET Security</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2017 · Lovely Professional University · Punjab</div>
+      <div class="tl-title">Associate Professor → Research Supervisor · PhD completed 2017</div>
+      <p class="tl-body">Transitioned to LPU. Completed PhD (CS&IT) from Nagpur University (2017) — thesis on Open-Source Software quality. Began guiding PhD scholars. Expanded into ethical hacking, penetration testing, cloud computing.</p>
+      <div class="tl-tags"><span class="tl-tag">PhD Awarded · Nagpur University</span><span class="tl-tag">LPU Punjab</span><span class="tl-tag">PhD Supervision Begins</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2019–2020 · LPU Punjab</div>
+      <div class="tl-title">Promoted to Associate Professor · First Patents Filed</div>
+      <p class="tl-body">Promoted at LPU. Supervising 6 PhD scholars. Filed first patents in Blockchain and IoT Security. Became reviewer for Journal of Computer Science (ISSN: 1549-3636). Citations begin accelerating.</p>
+      <div class="tl-tags"><span class="tl-tag">🔑 Associate Professor</span><span class="tl-tag">First Patents Filed</span><span class="tl-tag">Journal Reviewer</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2020–2023 · Jain (Deemed-to-be University) · Bengaluru</div>
+      <div class="tl-title">Associate Professor · Conference Organizer · 2 PhD Completions</div>
+      <p class="tl-body">Joined Jain University as Assoc. Professor. Research diversifies into Blockchain and IoT. Organized ICRDSTEM-2022 and ICRDSTEM-2023 (892+ papers, 10+ countries, 47 sessions). BoS Member for Cyber Security. Guided 2 PhD scholars to completion.</p>
+      <div class="tl-tags"><span class="tl-tag">Jain University</span><span class="tl-tag">ICRDSTEM-2022/2023</span><span class="tl-tag">BoS Member</span><span class="tl-tag">2 PhD Completions</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2023–Present · Sharda University · Greater Noida, UP</div>
+      <div class="tl-title">Professor → Deputy HoD (July 2026) · NBA/NAAC · Conferences · 3rd PhD Completion</div>
+      <p class="tl-body">Joined as Professor; elevated to <strong>Deputy HoD</strong> (July 2026) in the Department of CSA. Led NBA and NAAC accreditation processes. Organized ICAAAIML-2025, ICCISD-2026, ICCTDN-2026, Smart Innovation 2026. Guided C. K. Shinzeer to PhD completion (Blockchain, June 2026). Published in Nature Scientific Reports. Filed 10+ patents.</p>
+      <div class="tl-tags"><span class="tl-tag">🎓 Deputy HoD July 2026</span><span class="tl-tag">Professor @ Sharda</span><span class="tl-tag">NBA/NAAC Lead</span><span class="tl-tag">Nature Publication 2026</span><span class="tl-tag">18 Total Patents</span><span class="tl-tag">2 Copyrights Registered</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="research">
+  <div class="sec-head">
+    <div class="sec-label">Peer-Reviewed Archive · 2014 – 2026</div>
+    <h2 class="sec-title">Publication Archive</h2>
+    <p class="sec-sub">75+ peer-reviewed papers across IEEE, Springer, Elsevier, MDPI, Nature, Wiley, Scopus-indexed journals and conference proceedings. h-index: 9 · i10-index: 9 · 257 citations (Google Scholar) · 527 citations (ResearchGate).</p>
+  </div>
+  <table class="pub-table">
+    <thead><tr><th>Year</th><th>Title & Venue</th><th>Index</th></tr></thead>
+    <tbody>
+      <tr><td class="pub-year">2026</td><td><div class="pub-title"><a href="https://doi.org/10.1038/s41598-026-58571-2" target="_blank">Privacy-Aware Vaccine Recommendation Using Federated Learning and Blockchain ↗</a></div><div class="pub-venue">Scientific Reports (Nature) — DOI: 10.1038/s41598-026-58571-2 · Published 15 Jul 2026 [Corresponding Author]</div></td><td><span class="badge badge-nature">NATURE</span></td></tr>
+      <tr><td class="pub-year">2026</td><td><div class="pub-title"><a href="#">Development of Early Prediction of Diabetes Mellitus with a Simplified Probabilistic Feature Approach ↗</a></div><div class="pub-venue">AIP Conference Proceedings, vol. 3419, no. 1, 080004</div></td><td><span class="badge badge-scopus">SCOPUS</span></td></tr>
+      <tr><td class="pub-year">2026</td><td><div class="pub-title"><a href="#">A Comprehensive Systematic Approach to Phishing Detection: Analyzing URL Structures and Machine Learning Patterns ↗</a></div><div class="pub-venue">2026 International Conference on AI-Driven Innovations & Applications (ICAIDA)</div></td><td><span class="badge badge-indexed">INDEXED</span></td></tr>
+      <tr><td class="pub-year">2026</td><td><div class="pub-title"><a href="#">Performance-Aware Zero-Trust Architecture for Secure and Scalable Multi-Cloud Computing ↗</a></div><div class="pub-venue">2026 ICISESSC — IEEE</div></td><td><span class="badge badge-ieee">IEEE</span></td></tr>
+      <tr><td class="pub-year">2026</td><td><div class="pub-title"><a href="#">AI-Powered Intrusion Detection System in IoT Devices ↗</a></div><div class="pub-venue">2026 ICISESSC — IEEE</div></td><td><span class="badge badge-ieee">IEEE</span></td></tr>
+      <tr><td class="pub-year">2026</td><td><div class="pub-title"><a href="#">Deep Learning Architectures for Enhanced Breast Cancer Detection: A Comprehensive Analysis of Multimodal Diagnostic Systems ↗</a></div><div class="pub-venue">2026 ICISESSC — IEEE</div></td><td><span class="badge badge-ieee">IEEE</span></td></tr>
+      <tr><td class="pub-year">2026</td><td><div class="pub-title"><a href="#">Counterfactual Multimodal Deep Learning for Personalized Breast Cancer Risk Intervention ↗</a></div><div class="pub-venue">2026 ICISESSC — IEEE</div></td><td><span class="badge badge-ieee">IEEE</span></td></tr>
+      <tr><td class="pub-year">2026</td><td><div class="pub-title"><a href="#">An Integrated AIoT-Based Vehicle Safety System for Collision Avoidance, Fire Detection, and Drowsiness Monitoring ↗</a></div><div class="pub-venue">2026 IC3ECSBHI — IEEE</div></td><td><span class="badge badge-ieee">IEEE</span></td></tr>
+      <tr><td class="pub-year">2026</td><td><div class="pub-title"><a href="https://scholar.google.com/scholar?q=AIBased+Threat+Intelligence+Sharing+on+Decentralized+Networks" target="_blank">AI-Based Threat Intelligence Sharing on Decentralized Networks ↗</a></div><div class="pub-venue">Scientific Journal of AI and Blockchain Technologies, vol. 3</div></td><td><span class="badge badge-indexed">INDEXED</span></td></tr>
+      <tr><td class="pub-year">2026</td><td><div class="pub-title"><a href="https://www.igi-global.com/chapter/iot-blockchain-decentralised-framework" target="_blank">IoT-Blockchain Decentralised Framework for Predicting Cardiovascular Disease ↗</a></div><div class="pub-venue">AI Solutions for Detecting Cyber-Attacks in Information Systems, IGI Global, pp. 21–38</div></td><td><span class="badge badge-chapter">CHAPTER</span></td></tr>
+      <tr><td class="pub-year">2026</td><td><div class="pub-title"><a href="https://www.igi-global.com/chapter/improving-kidney-disorder-prediction" target="_blank">Improving Kidney Disorder Prediction Accuracy Using Blockchain with IoT Modules ↗</a></div><div class="pub-venue">Human-Centered AI Applications for Medical Informatics, IGI Global</div></td><td><span class="badge badge-chapter">CHAPTER</span></td></tr>
+      <tr><td class="pub-year">2025</td><td><div class="pub-title"><a href="https://doi.org/10.1109/ACCESS.2025.10820183" target="_blank">Detection of Diabetic Retinopathy Using a Multi-Decision InceptionResNet-Blended Hybrid Model ↗</a> ✦ High Impact</div><div class="pub-venue">IEEE Access, Vol. 13, pp. 8988–9005 · DOI: 10.1109/ACCESS.2025.10820183</div></td><td><span class="badge badge-ieee">IEEE SCI</span></td></tr>
+      <tr><td class="pub-year">2025</td><td><div class="pub-title"><a href="https://doi.org/10.1007/s41870-025-02471-7" target="_blank">Improving Energy Efficiency in Scalable WSNs through IoT-Driven Approach ↗</a></div><div class="pub-venue">International Journal of Information Technology · Springer · DOI: 10.1007/s41870-025-02471-7</div></td><td><span class="badge badge-springer">SPRINGER</span></td></tr>
+      <tr><td class="pub-year">2025</td><td><div class="pub-title"><a href="https://ieeexplore.ieee.org/book/10704424" target="_blank">Harnessing IoT: Transforming Smart Grid Advancements ↗</a> ✦ 7 cited</div><div class="pub-venue">Wiley-IEEE Press Book Chapter · IEEE Xplore</div></td><td><span class="badge badge-ieee">IEEE</span></td></tr>
+      <tr><td class="pub-year">2025</td><td><div class="pub-title"><a href="https://doi.org/10.2478/ijssis-2025-0003" target="_blank">A New Local Tetra Pattern in Composite Planes (LTcP) for Classifying Brain Tumors ↗</a> ✦ 3 cited</div><div class="pub-venue">Intl. Journal on Smart Sensing and Intelligent Systems 18(1) · DOI: 10.2478/ijssis-2025-0003</div></td><td><span class="badge badge-scopus">SCOPUS</span></td></tr>
+      <tr><td class="pub-year">2025</td><td><div class="pub-title"><a href="#">Optimized Multi-Layer Security Framework for Resource-Constrained IoT Edge Devices ↗</a></div><div class="pub-venue">IEEE Xplore · GIET2025</div></td><td><span class="badge badge-ieee">IEEE</span></td></tr>
+      <tr><td class="pub-year">2025</td><td><div class="pub-title"><a href="https://scholar.google.com/scholar?q=Proxy+Pattern+Smart+ContractEnabled+Secure+Vaccine+Model" target="_blank">Proxy Pattern Smart Contract-Enabled Secure Vaccine Model using ASC-MT ↗</a></div><div class="pub-venue">6th Intl. Conf. on Electronics and Sustainable Communication Systems (ICESC)</div></td><td><span class="badge badge-ieee">IEEE</span></td></tr>
+      <tr><td class="pub-year">2025</td><td><div class="pub-title"><a href="https://scholar.google.com/scholar?q=Object+Detection+FineTuned+YOLO+V9+Bayesian" target="_blank">Object Detection Using Fine-Tuned YOLO V9 with Bayesian Optimization ↗</a></div><div class="pub-venue">2nd Intl. Conf. on Multidisciplinary Research and Applications (ICMRA)</div></td><td><span class="badge badge-ieee">IEEE</span></td></tr>
+      <tr><td class="pub-year">2025</td><td><div class="pub-title"><a href="https://www.jetir.org/papers/JETIR2502812.pdf" target="_blank">Implementing ITIL Best Practices for Enterprise Data Warehouse Support and Management ↗</a></div><div class="pub-venue">JETIR Vol. 12, No. 2, pp. 109–117</div></td><td><span class="badge badge-scopus">SCOPUS</span></td></tr>
+      <tr><td class="pub-year">2024</td><td><div class="pub-title"><a href="https://doi.org/10.1007/978-3-031-74701-4_18" target="_blank">Advanced Image Captioning Using Deep Learning: A CNN-LSTM Approach ↗</a></div><div class="pub-venue">ICICBDA 2024 · Springer CCIS Vol. 2235 · DOI: 10.1007/978-3-031-74701-4_18</div></td><td><span class="badge badge-springer">SPRINGER</span></td></tr>
+      <tr><td class="pub-year">2024</td><td><div class="pub-title"><a href="https://doi.org/10.1007/s41870-024-01980-1" target="_blank">Blockchain Platform for Prophylactic Vaccine Preparation using Signature-Based Secured Authentication ↗</a></div><div class="pub-venue">Int. Journal of Information Technology · Springer · DOI: 10.1007/s41870-024-01980-1</div></td><td><span class="badge badge-springer">SPRINGER</span></td></tr>
+      <tr><td class="pub-year">2024</td><td><div class="pub-title"><a href="https://www.mdpi.com/2673-4591/62/1/8" target="_blank">An Auditory System Interface for Augmented Accessibility: Empowering the Visually Impaired ↗</a></div><div class="pub-venue">Engineering Proceedings Vol. 62, No. 1, Art. 8 · MDPI</div></td><td><span class="badge badge-mdpi">MDPI</span></td></tr>
+      <tr><td class="pub-year">2024</td><td><div class="pub-title"><a href="https://www.mdpi.com/2673-4591/62/1/11" target="_blank">A Survey on Applications of Distributed Ledger Technology in Healthcare ↗</a></div><div class="pub-venue">Engineering Proceedings Vol. 62, No. 1, Art. 11 · MDPI</div></td><td><span class="badge badge-mdpi">MDPI</span></td></tr>
+      <tr><td class="pub-year">2024</td><td><div class="pub-title"><a href="http://www.iaset.us/download/archives/08-01-2025-1736323990-6-%20IJCSE32.%20IJCSE%20-%20DATA%20LAKE%20VS%20DATA%20WAREHOUSE%20STRATEGIC%20IMPLEMENTATION%20WITH%20SNOWFLAKE.pdf" target="_blank">DATA LAKE VS DATA WAREHOUSE: Strategic Implementation with Snowflake ↗</a></div><div class="pub-venue">IJCSE Vol. 13, No. 2, pp. 871–892</div></td><td><span class="badge badge-scopus">SCOPUS</span></td></tr>
+      <tr><td class="pub-year">2024</td><td><div class="pub-title"><a href="https://ijmirm.com/index.php/ijmirm/article/view/154" target="_blank">The Role of AI in Detecting Malicious Activities on Social Media Platforms ↗</a></div><div class="pub-venue">IJMIRM Vol. 3, No. 4, pp. 24–48</div></td><td><span class="badge badge-scopus">SCOPUS</span></td></tr>
+      <tr><td class="pub-year">2023</td><td><div class="pub-title"><a href="https://doi.org/10.1155/2023/5143620" target="_blank">Nonlinear Energy Optimization in WSN through NN-LEACH ↗</a> ✦ 6 cited</div><div class="pub-venue">Mathematical Problems in Engineering, Art. 5143620 · DOI: 10.1155/2023/5143620</div></td><td><span class="badge badge-scopus">SCOPUS</span></td></tr>
+      <tr><td class="pub-year">2023</td><td><div class="pub-title"><a href="https://doi.org/10.1109/ICCCNT57761.2023.10306589" target="_blank">Blockchain in Healthcare System Using Hyperledger Fabric – A Comprehensive Review ↗</a></div><div class="pub-venue">14th ICCCNT 2023 · IEEE · DOI: 10.1109/ICCCNT57761.2023.10306589</div></td><td><span class="badge badge-ieee">IEEE</span></td></tr>
+      <tr><td class="pub-year">2023</td><td><div class="pub-title"><a href="https://doi.org/10.1080/1206212X.2023.2243676" target="_blank">Secure Medical Data Storage in DPoS-Hyperledger Fabric Blockchain using PM-ECC and L2-DWT ↗</a></div><div class="pub-venue">Int. Journal of Computers and Applications, Vol. 45, No. 7–8 · DOI: 10.1080/1206212X.2023.2243676</div></td><td><span class="badge badge-scopus">SCOPUS</span></td></tr>
+      <tr><td class="pub-year">2022</td><td><div class="pub-title"><a href="https://www.neuroquantology.com/media/article_pdfs/1094-1100.pdf" target="_blank">Manageable E-Governance Architecture in Health Care System Using Cloud Storage ↗</a></div><div class="pub-venue">Neuroquantology Vol. 20, No. 14, pp. 1094–1100</div></td><td><span class="badge badge-scopus">SCOPUS</span></td></tr>
+      <tr><td class="pub-year">2022</td><td><div class="pub-title"><a href="https://www.jetir.org/papers/JETIRFM06010.pdf" target="_blank">Blockchain Based Data Analysis of COVID-19 Variants and Vaccines ↗</a></div><div class="pub-venue">JETIR Vol. 9, No. 6, pp. 53–62</div></td><td><span class="badge badge-indexed">INDEXED</span></td></tr>
+      <tr><td class="pub-year">2021</td><td><div class="pub-title"><a href="https://doi.org/10.1088/1674-1056/abdda9" target="_blank">Comprehensive Studies on Dielectric Properties of p-Methoxy Benzylidene p-Decyl Aniline ↗</a></div><div class="pub-venue">Chinese Physics B, Vol. 30, No. 6, 064208 · DOI: 10.1088/1674-1056/abdda9</div></td><td><span class="badge badge-scopus">SCOPUS</span></td></tr>
+      <tr><td class="pub-year">2020</td><td><div class="pub-title"><a href="https://doi.org/10.1109/ICCS45141.2019.9065889" target="_blank">An Elicit Elucidation on the Process of Education Data Mining ↗</a></div><div class="pub-venue">ICCS 2019 Proceedings · IEEE · DOI: 10.1109/ICCS45141.2019.9065889</div></td><td><span class="badge badge-ieee">IEEE</span></td></tr>
+      <tr><td class="pub-year">2019</td><td><div class="pub-title"><a href="https://thinkindiaquarterly.org/index.php/thinkindia/article/view/16963/12000" target="_blank">Hybrid Cryptographic Algorithm for Ensuring Cross-Platform Mobile Security ↗</a></div><div class="pub-venue">Think India Journal, Vol. 22, No. 17</div></td><td><span class="badge badge-scopus">SCOPUS</span></td></tr>
+      <tr><td class="pub-year">2019</td><td><div class="pub-title"><a href="#">Emerging Trends in Cyber Security on Business and Its Impact ↗</a></div><div class="pub-venue">Journal of the Gujarat Research Society, Vol. 21, No. 6</div></td><td><span class="badge badge-scopus">SCOPUS</span></td></tr>
+      <tr><td class="pub-year">2018</td><td><div class="pub-title"><a href="https://www.researchgate.net/publication/331974133" target="_blank">Smarter Implementation of Blockchain in Smart Contracts ↗</a></div><div class="pub-venue">Int. Journal of Computer Engineering & Applications, Vol. VI</div></td><td><span class="badge badge-scopus">SCOPUS</span></td></tr>
+      <tr><td class="pub-year">2018</td><td><div class="pub-title"><a href="https://ieeexplore.ieee.org/document/8693698" target="_blank">Mobile Application Development Research Based on Xamarin Platform ↗</a> ✦ 27 cited</div><div class="pub-venue">4th ICCS, pp. 115–118 · IEEE</div></td><td><span class="badge badge-ieee">IEEE</span></td></tr>
+      <tr><td class="pub-year">2018</td><td><div class="pub-title"><a href="https://ieeexplore.ieee.org/document/8693695" target="_blank">A Review on Integration of Big Data and IoT ↗</a> ✦ 21 cited</div><div class="pub-venue">4th ICCS, pp. 200–203 · IEEE</div></td><td><span class="badge badge-ieee">IEEE</span></td></tr>
+      <tr><td class="pub-year">2018</td><td><div class="pub-title"><a href="https://ieeexplore.ieee.org/document/8693700" target="_blank">Approach to Identify KPAs and KPIs for Higher Education Institutions ↗</a> ✦ 11 cited</div><div class="pub-venue">4th ICCS, pp. 213–217 · IEEE</div></td><td><span class="badge badge-ieee">IEEE</span></td></tr>
+      <tr><td class="pub-year">2015</td><td><div class="pub-title"><a href="https://www.worldwidejournals.com/global-journal-for-research-analysis-GJRA/fileview/June_2015_1434180490__54.pdf" target="_blank">AJAK Model: Quality Enhancing of OSS for End-User Perspective ↗</a></div><div class="pub-venue">Global Journal for Research Analysis, Vol. 4, No. 2</div></td><td><span class="badge badge-scopus">SCOPUS</span></td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top:20px;font-size:.8rem;color:var(--text3)">Full list (75+ papers) at: <a href="https://dblp.org/pid/362/0470.html" target="_blank" style="color:var(--gold)">dblp.org/pid/362/0470.html</a> · <a href="https://scholar.google.com/citations?user=T8gf_W4AAAAJ" target="_blank" style="color:var(--gold)">Google Scholar</a> · <a href="https://www.scopus.com/authid/detail.uri?authorId=57212812452" target="_blank" style="color:var(--gold)">Scopus 57212812452</a></p>
+</section>
+
+<!-- PATENTS -->
+<section id="patents">
+  <div class="sec-head">
+    <div class="sec-label">Innovation Archive · 2019 – 2026 · 18 Patents</div>
+    <h2 class="sec-title">Patents Portfolio</h2>
+    <p class="sec-sub">18 patents across India and United Kingdom — spanning quantum security, IoT, AI/ML, blockchain, and next-generation computing interfaces.</p>
+  </div>
+  <h3 style="color:var(--green);font-size:.85rem;margin-bottom:16px;text-transform:uppercase;letter-spacing:.08em">✅ Granted</h3>
+  <div class="patent-grid" style="margin-bottom:32px">
+    <div class="patent-card granted"><div class="pat-status granted">✅ GRANTED</div><div class="pat-country">🇮🇳</div><div class="pat-title">Quantum Key Distribution Device for Secured Cloud Communication</div><div class="pat-num">📋 Design Patent No. 416080-001 · Govt. of India</div><div class="pat-date">🗓️ Granted: 1st August 2024</div></div>
+    <div class="patent-card granted"><div class="pat-status granted">✅ GRANTED</div><div class="pat-country">🇬🇧</div><div class="pat-title">Computer Apparatus for Security with Quantum-Infused Interfaces</div><div class="pat-num">📋 UK IPO Design No. 6344597</div><div class="pat-date">🗓️ Granted: 11th March 2024 · UK Intellectual Property Office</div></div>
+    <div class="patent-card granted"><div class="pat-status granted">✅ GRANTED</div><div class="pat-country">🇮🇳</div><div class="pat-title">An Automatic Shielding Socket</div><div class="pat-num">📋 Filed Docket No. 10605</div><div class="pat-date">🗓️ Filed: 29 Jan 2020 · Applied for Grant: 29 Jan 2021</div></div>
+  </div>
+  <h3 style="color:var(--gold);font-size:.85rem;margin-bottom:16px;text-transform:uppercase;letter-spacing:.08em">📌 Published</h3>
+  <div class="patent-grid">
+    <div class="patent-card"><div class="pat-status published">📌 PUBLISHED</div><div class="pat-country">🇮🇳</div><div class="pat-title">Data Processing Apparatus with Integrated Computational Efficiency Features</div><div class="pat-num">📋 Design No. 491810-001</div><div class="pat-date">🗓️ Published: 26th May 2026</div></div>
+    <div class="patent-card"><div class="pat-status published">📌 PUBLISHED</div><div class="pat-country">🇮🇳</div><div class="pat-title">A Vehicle Safety System</div><div class="pat-num">📋 App. No. 202611028736 A</div><div class="pat-date">🗓️ Published: 8th May 2026</div></div>
+    <div class="patent-card"><div class="pat-status published">📌 PUBLISHED</div><div class="pat-country">🇮🇳</div><div class="pat-title">Enhancing Efficiency and Accuracy in ITGC Evaluation</div><div class="pat-num">📋 App. No. 202511118461 A</div><div class="pat-date">🗓️ Filed: 28 Nov 2025 · Published: 16th January 2026</div></div>
+    <div class="patent-card"><div class="pat-status published">📌 PUBLISHED</div><div class="pat-country">🇮🇳</div><div class="pat-title">Budget Bot Console for Clinical Trials</div><div class="pat-num">📋 Design No. 461562-001 · Class 14-02</div><div class="pat-date">🗓️ Registered: 8th June 2025</div></div>
+    <div class="patent-card"><div class="pat-status published">📌 PUBLISHED</div><div class="pat-country">🇮🇳</div><div class="pat-title">Crypto Cloud Guard — Performance Analysis of Cloud Security Algorithms</div><div class="pat-num">📋 App. No. 202511020851 A</div><div class="pat-date">🗓️ Published: 28th March 2025</div></div>
+    <div class="patent-card"><div class="pat-status published">📌 PUBLISHED</div><div class="pat-country">🇮🇳</div><div class="pat-title">JIRA Automation AI</div><div class="pat-num">📋 App. No. 202511020450 A</div><div class="pat-date">🗓️ Published: 21st March 2025</div></div>
+    <div class="patent-card"><div class="pat-status published">📌 PUBLISHED</div><div class="pat-country">🇮🇳</div><div class="pat-title">AI-Driven Intrusion Detection and Prevention System for Quantum Networks</div><div class="pat-num">📋 App. No. 202411104713 A</div><div class="pat-date">🗓️ Published: 21st February 2025</div></div>
+    <div class="patent-card"><div class="pat-status published">📌 PUBLISHED</div><div class="pat-country">🇮🇳</div><div class="pat-title">Edge AI-Powered Facial Recognition System for Robust Identification after Facial Modification</div><div class="pat-num">📋 App. No. 202411104712 A</div><div class="pat-date">🗓️ Published: 21st February 2025</div></div>
+    <div class="patent-card"><div class="pat-status published">📌 PUBLISHED</div><div class="pat-country">🇮🇳</div><div class="pat-title">Machine Learning-Based Adaptive Security for IoT Devices</div><div class="pat-num">📋 App. No. 202411104714 A</div><div class="pat-date">🗓️ Published: 21st February 2025</div></div>
+    <div class="patent-card"><div class="pat-status published">📌 PUBLISHED</div><div class="pat-country">🇮🇳</div><div class="pat-title">Quantum Computer-Based Cryptographic Key Management System</div><div class="pat-num">📋 App. No. 202421104715 A</div><div class="pat-date">🗓️ Published: 24th January 2025</div></div>
+    <div class="patent-card"><div class="pat-status published">📌 PUBLISHED</div><div class="pat-country">🇮🇳</div><div class="pat-title">A Virtual Lost and Found System</div><div class="pat-num">📋 App. No. 202411015649 A</div><div class="pat-date">🗓️ Published: 8th March 2024</div></div>
+    <div class="patent-card"><div class="pat-status published">📌 PUBLISHED</div><div class="pat-country">🇮🇳</div><div class="pat-title">TFSGAN — Tabular Synthetic Data Generation</div><div class="pat-num">📋 App. No. 202341016557</div><div class="pat-date">🗓️ Published: 31st March 2023</div></div>
+    <div class="patent-card"><div class="pat-status published">📌 PUBLISHED</div><div class="pat-country">🇮🇳</div><div class="pat-title">Smart Security System in Fashion Industry using Blockchain Technology</div><div class="pat-num">📋 App. No. 202231031630</div><div class="pat-date">🗓️ Published: 3rd June 2022</div></div>
+    <div class="patent-card"><div class="pat-status published">📌 PUBLISHED</div><div class="pat-country">🇮🇳</div><div class="pat-title">Decentralized Blockchain-based Multi-Chain Data Synchronization for Smart Manufacturing</div><div class="pat-num">📋 App. No. 202141019972 A</div><div class="pat-date">🗓️ Published: 7th May 2021</div></div>
+    <div class="patent-card"><div class="pat-status published">📌 PUBLISHED</div><div class="pat-country">🇮🇳</div><div class="pat-title">A Smart Belt for Children to Provide Security</div><div class="pat-num">📋 App. No. 201911050421 A</div><div class="pat-date">🗓️ Published: 20th December 2019</div></div>
+  </div>
+  <div class="patent-summary">
+    <div><div class="ps-num">18</div><div class="ps-label">Total Filed</div></div>
+    <div><div class="ps-num">3</div><div class="ps-label">Granted</div></div>
+    <div><div class="ps-num">15</div><div class="ps-label">Published</div></div>
+    <div><div class="ps-num">🇮🇳🇬🇧</div><div class="ps-label">India + UK</div></div>
+  </div>
+</section>
+
+<!-- COPYRIGHT -->
+<section id="copyright">
+  <div class="sec-head">
+    <div class="sec-label">Intellectual Property · 2026</div>
+    <h2 class="sec-title">Copyright Registrations</h2>
+    <p class="sec-sub">2 copyright registrations under the Copyright Office, Government of India — both registered in 2026, covering AI/ML research works in healthcare and multimedia.</p>
+  </div>
+  <div class="copy-grid">
+    <div class="copy-card">
+      <div class="copy-badge">© REGISTERED · 2026</div>
+      <div class="copy-title">Comparative Analysis of Traditional Machine Learning and Deep Learning Approaches for Multi-Modal Video Sentiment Analysis</div>
+      <div class="copy-meta">Certificate No. <span>LD-20260192463</span> &nbsp;·&nbsp; Filed: 7th April 2026 &nbsp;·&nbsp; Registered: <span>22nd July 2026</span> &nbsp;·&nbsp; Copyright Office, Govt. of India</div>
+    </div>
+    <div class="copy-card">
+      <div class="copy-badge">© REGISTERED · 2026</div>
+      <div class="copy-title">Brain Tumor Detection Using Neural Network Based Fusion Optimization Techniques</div>
+      <div class="copy-meta">Filed: 7th May 2026 &nbsp;·&nbsp; Registered: <span>25th August 2026</span> &nbsp;·&nbsp; Copyright Office, Govt. of India</div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKS -->
+<section id="books" style="background:var(--bg2)">
+  <div class="sec-head">
+    <div class="sec-label">Authored Works · 2013 – 2026</div>
+    <h2 class="sec-title">Books & Publications</h2>
+    <p class="sec-sub">12 books across national and international publishers — covering Computer Science, Cybersecurity, Blockchain, Python, Android, IoT, AI, and Research Ethics.</p>
+  </div>
+  <div class="books-grid">
+    <div class="book-card"><div class="book-emoji">⚙️</div><span class="book-badge">NEW 2025</span><div class="book-title">Practical Process Control & Instrumentation for Engineers</div><div class="book-desc">Hands-on guide to industrial process control, sensors, measurement systems, and instrumentation best practices.</div><div class="book-pub">Amazon · 2025</div><div class="book-isbn">ASIN: B0F7HW6FQ2</div><a href="https://www.amazon.in/Practical-Process-Control-Instrumentation-Engineers/dp/B0F7HW6FQ2/" target="_blank" class="book-link">Buy on Amazon.in ↗</a></div>
+    <div class="book-card"><div class="book-emoji">🏗️</div><span class="book-badge">NEW 2025</span><div class="book-title">Advanced Modernization Architectures & Best Practices</div><div class="book-desc">Modern software architecture patterns, cloud modernization strategies, and enterprise best practices for digital transformation.</div><div class="book-pub">Amazon · 2025</div><div class="book-isbn">ASIN: B0F6NYQB8F</div><a href="https://www.amazon.in/Advanced-Modernization-Architectures-Best-Practices/dp/B0F6NYQB8F/" target="_blank" class="book-link">Buy on Amazon.in ↗</a></div>
+    <div class="book-card"><div class="book-emoji">📱</div><span class="book-badge">2025</span><div class="book-title">Innovations in iOS and watchOS Development</div><div class="book-desc">Bridging User-Centric Design with Cutting-Edge Technology · SwiftUI, WatchKit, ARKit & Core ML.</div><div class="book-pub">DeepMisti Publication · Feb 2025</div><div class="book-isbn">ISBN: 978-93-6044-623-9</div><a href="https://www.amazon.in/Innovations-iOS-watchOS-Development-User-Centric/dp/B0DVR7V7QH/" target="_blank" class="book-link">Amazon.in ↗</a></div>
+    <div class="book-card"><div class="book-emoji">🧬</div><span class="book-badge">2025</span><div class="book-title">Genetic AI Algorithms: Evolutionary Approaches for Solving Complex Computational Problems</div><div class="book-desc">Bio-inspired optimization: genetic operators, selection strategies, crossover, mutation & real-world applications.</div><div class="book-pub">DeepMisti Publication · Jan 2025</div><div class="book-isbn">ISBN: 978-93-6044-235-4</div><a href="https://www.amazon.in/Genetic-Algorithms-Evolutionary-Approaches-Computational/dp/B0DT17PRGV/" target="_blank" class="book-link">Amazon.in ↗</a></div>
+    <div class="book-card"><div class="book-emoji">🔐</div><span class="book-badge">2023</span><div class="book-title">Network & Cyber Security</div><div class="book-desc">Comprehensive coverage of modern threats, firewalls, encryption, ethical hacking & digital forensics.</div><div class="book-pub">Books Archade Publication, New Delhi · Oct 2023</div><div class="book-isbn">ISBN: 978-81-19199-27-3</div><a href="https://www.amazon.in/s?k=Network+Cyber+Security+Ajay+Kushwaha" target="_blank" class="book-link">Amazon.in ↗</a></div>
+    <div class="book-card"><div class="book-emoji">💻</div><span class="book-badge">2022</span><div class="book-title">Developing Programming Logic & Techniques</div><div class="book-desc">For B.Sc.(CS), BCA, B.Sc.(IT) — algorithms, flowcharts, pseudocode & structured programming.</div><div class="book-pub">Das Ganu Prakashan, Nagpur · Nov 2022</div><div class="book-isbn">ISBN: 978-93-5551-124-9</div><a href="https://www.amazon.in/s?k=ajay+shriram+kushwaha&i=stripbooks" target="_blank" class="book-link">Amazon.in ↗</a></div>
+    <div class="book-card"><div class="book-emoji">🐍</div><span class="book-badge">2022</span><div class="book-title">A Journey to Core Python</div><div class="book-desc">Tuples, Dicts, Lists, Operators, OOP, Exception Handling · 286 pages · 4.5★ rating.</div><div class="book-pub">BPB Publications, New Delhi · Jan 2022</div><div class="book-isbn">ISBN: 978-93-5551-124-9</div><a href="https://www.amazon.in/Journey-Core-Python-Experience-Applications/dp/9355511248/" target="_blank" class="book-link">Amazon.in ↗</a></div>
+    <div class="book-card"><div class="book-emoji">📜</div><span class="book-badge">2021 / 3rd Ed. 2026</span><div class="book-title">Research & Publication Ethics</div><div class="book-desc">Academic integrity, plagiarism, research methodology & ethical standards for scholars and faculty.</div><div class="book-pub">Das Ganu Prakashan, Nagpur · Jul 2021 / Aug 2026</div><div class="book-isbn">ISBN: 978-93-84336-71-4</div><a href="https://www.amazon.in/RESEARCH-PUBLICATION-ETHICS-Dr-S-B-Kishor/dp/9384336718/" target="_blank" class="book-link">Amazon.in ↗</a></div>
+    <div class="book-card"><div class="book-emoji">🤖</div><span class="book-badge">2019</span><div class="book-title">Mobile Application Development using Android</div><div class="book-desc">International Edition — Java, Android SDK, UI design, APIs & deployment · Published in Germany 🇩🇪.</div><div class="book-pub">LAMBERT Academic Publication, Germany · Aug 2019</div><div class="book-isbn">ISBN: 978-620-0-26993-5</div><a href="https://www.amazon.in/Mobile-Application-Development-using-Android/dp/6200269939/" target="_blank" class="book-link">Amazon.in ↗</a></div>
+    <div class="book-card"><div class="book-emoji">🔍</div><span class="book-badge">2015</span><div class="book-title">Computer Forensic Science</div><div class="book-desc">Digital investigation, evidence collection, cyber forensics tools & cybercrime analysis procedures.</div><div class="book-pub">Das Ganu Prakashan, Nagpur · Jul 2015</div><div class="book-isbn">ISBN: 978-93-84336-09-7</div><a href="https://www.amazon.in/Computer-Forensic-Science-Kushwaha-Kondawar/dp/9384336092/" target="_blank" class="book-link">Amazon.in ↗</a></div>
+    <div class="book-card"><div class="book-emoji">☁️</div><span class="book-badge">2015</span><div class="book-title">Data Communication with Cloud Computing Basics</div><div class="book-desc">Networking fundamentals, cloud architecture, protocols, data transmission & cloud service models.</div><div class="book-pub">Das Ganu Prakashan, Nagpur · Jul 2015</div><div class="book-isbn">ISBN: 978-93-81660-99-7</div><a href="https://www.amazon.in/s?k=ajay+shriram+kushwaha&i=stripbooks" target="_blank" class="book-link">Amazon.in ↗</a></div>
+    <div class="book-card"><div class="book-emoji">📺</div><span class="book-badge">2013</span><div class="book-title">Media Management</div><div class="book-desc">Media studies, content strategy, broadcast systems & digital communication management.</div><div class="book-pub">Das Ganu Prakashan, Nagpur · Jul 2013</div><div class="book-isbn">ISBN: 978-81-927984-9-3</div><a href="https://www.amazon.in/s?k=ajay+shriram+kushwaha&i=stripbooks" target="_blank" class="book-link">Amazon.in ↗</a></div>
+  </div>
+  <p style="margin-top:24px;font-size:.82rem;color:var(--text2);font-style:italic">Editor-in-Chief — <strong>"Advance Technologies and Recent Trends in Computing (ATRTC-2022)"</strong> · Benthem Science Publication, Singapore · August 2022</p>
+  <div class="books-stats">
+    <div><div class="ps-num">12</div><div class="ps-label">Total Books</div></div>
+    <div><div class="ps-num">3</div><div class="ps-label">International</div></div>
+    <div><div class="ps-num">9</div><div class="ps-label">National</div></div>
+    <div><div class="ps-num">2013–26</div><div class="ps-label">Span</div></div>
+    <div><div class="ps-num">6+</div><div class="ps-label">Publishers</div></div>
+  </div>
+  <div style="text-align:center;margin-top:24px"><a href="https://www.amazon.in/s?k=ajay+shriram+kushwaha&i=stripbooks" target="_blank" class="btn btn-outline">📚 Browse All Books on Amazon.in ↗</a></div>
+</section>
+
+<!-- GLOBAL -->
+<section id="global">
+  <div class="sec-head">
+    <div class="sec-label">Global Academic Footprint</div>
+    <h2 class="sec-title">World Presence</h2>
+    <p class="sec-sub">Verified locations from career history, patents, memberships, publications, and conference participation.</p>
+  </div>
+  <div class="global-grid">
+    <div class="country-card"><div class="cc-flag">🇮🇳</div><div><div class="cc-title">India — 6 Academic Institutions</div><div class="cc-body">Sardar Patel College (Chandrapur) · BIT Ballarpur · LPU Phagwara · Jain University Bengaluru · Sharda University Greater Noida · RTM Nagpur University (PhD)</div></div></div>
+    <div class="country-card"><div class="cc-flag">🇬🇧</div><div><div class="cc-title">United Kingdom — Patent Holder</div><div class="cc-body">UK Intellectual Property Office — Design Patent No. 6344597 granted 11th March 2024 · "Computer Apparatus for Security with Quantum-Infused Interfaces"</div></div></div>
+    <div class="country-card"><div class="cc-flag">🇭🇰</div><div><div class="cc-title">Hong Kong — IAENG Lifetime Member</div><div class="cc-body">International Association of Engineers — Lifetime Member in 4 Societies: AI · Computer Science · Data Mining · Software Engineering</div></div></div>
+    <div class="country-card"><div class="cc-flag">🇸🇬</div><div><div class="cc-title">Singapore — Editor-in-Chief</div><div class="cc-body">Benthem Science Publication, Singapore — Editor-in-Chief for "Advance Technologies and Recent Trends in Computing [ATRTC-2022]"</div></div></div>
+    <div class="country-card"><div class="cc-flag">🇩🇪</div><div><div class="cc-title">Germany — Book Published</div><div class="cc-body">LAMBERT Academic Publication, Germany — "Mobile Application Development using Android" (ISBN: 978-620-0-26993-5, Aug 2019)</div></div></div>
+    <div class="country-card"><div class="cc-flag">🌏</div><div><div class="cc-title">Global Research Network</div><div class="cc-body">Collaborated with Al-Quds University (Palestine), University of Nicosia (Cyprus), researchers from UAE, Saudi Arabia, Pakistan, Philippines and more through co-authored publications in IEEE, Nature, and Springer.</div></div></div>
+  </div>
+  <div class="conf-countries">
+    <h4>Conference Participation Countries (ICRDSTEM-2023 / ICAAAIML / ICCISD-2026)</h4>
+    <p>🇮🇳 India · 🇬🇧 United Kingdom · 🇺🇸 USA · 🇸🇬 Singapore · 🇦🇺 Australia · 🇩🇪 Germany · 🇫🇷 France · 🇯🇵 Japan · 🇰🇷 Korea · 🇧🇷 Brazil · 🇷🇺 Russia · 🇵🇸 Palestine · 🇨🇾 Cyprus · 🇦🇪 UAE · 🇵🇰 Pakistan + more</p>
+  </div>
+</section>
+
+<!-- MEDIA -->
+<section id="media">
+  <div class="sec-head">
+    <div class="sec-label">Media · Press · Academic Coverage · 2011 – 2026</div>
+    <h2 class="sec-title">Media & Public Presence</h2>
+    <p class="sec-sub">Verified media appearances, institutional recognitions, press mentions, editorial roles, and digital platform presence.</p>
+  </div>
+  <div class="media-grid">
+    <div class="media-card"><div style="color:var(--blue)" class="media-cat">🏛️ Official Institutional</div><div class="media-title">Faculty Profile — Sharda University Official Website</div><div class="media-body">Official faculty page listing research, patents, books, certifications, and academic contributions. Listed under Sharda School of Engineering & Technology, Department of Computer Science & Applications.</div><div class="media-meta">sharda.ac.in · 2023 – Present</div><a href="https://www.sharda.ac.in/faculty/details/ajay-shriram-kushwaha/" target="_blank" class="media-link">Visit ↗</a></div>
+    <div class="media-card"><div style="color:var(--gold)" class="media-cat">🎓 Research Index</div><div class="media-title">Google Scholar Profile — 257 Citations, h-index: 9, i10-index: 9</div><div class="media-body">Public academic profile on Google Scholar indexing 75+ publications. h-index: 9. i10-index: 9. Cited by researchers from 50+ countries globally. Updated October 2026.</div><div class="media-meta">scholar.google.com · 2015 – Present</div><a href="https://scholar.google.com/citations?user=T8gf_W4AAAAJ&hl=en" target="_blank" class="media-link">Scholar ↗</a></div>
+    <div class="media-card"><div style="color:var(--green)" class="media-cat">🔬 Research Network</div><div class="media-title">ResearchGate — 527 Citations · 9,679 Reads</div><div class="media-body">Active research profile with 59+ publications listed, 9,679 reads, and 527 citations as of October 2026. Researching Quantum Computing Security, Blockchain for Healthcare, and IoT Security.</div><div class="media-meta">researchgate.net · 2019 – Present</div><a href="https://www.researchgate.net/profile/Ajay-Kushwaha-8" target="_blank" class="media-link">Profile ↗</a></div>
+    <div class="media-card"><div style="color:#60a5fa" class="media-cat">⚡ IEEE Xplore</div><div class="media-title">IEEE Xplore — Author Profile & Indexed Papers</div><div class="media-body">IEEE Senior Member (ID #92583793). 5+ papers indexed on IEEE Xplore including "Detection of Diabetic Retinopathy" (IEEE Access 2025), ICISESSC 2026 papers, and IC3ECSBHI 2026.</div><div class="media-meta">ieeexplore.ieee.org · 2014 – Present</div><a href="https://ieeexplore.ieee.org/author/37086512000" target="_blank" class="media-link">IEEE Xplore ↗</a></div>
+    <div class="media-card"><div style="color:var(--purple)" class="media-cat">📖 Editor-in-Chief</div><div class="media-title">Benthem Science Publications — Editor-in-Chief</div><div class="media-body">Appointed Editor-in-Chief for "Advanced Technologies and Recent Trends in Computing [ATRTC-2022]" by Benthem Science Publications, Singapore — a globally recognized STM publisher of 130+ peer-reviewed journals.</div><div class="media-meta">benthamscience.com · Singapore · 2022 – Ongoing</div><a href="https://www.benthamscience.com/" target="_blank" class="media-link">Publisher ↗</a></div>
+    <div class="media-card"><div style="color:var(--scopus,#f59e0b)" class="media-cat">📊 Scopus / Elsevier</div><div class="media-title">Scopus Author Profile — ID 57212812452</div><div class="media-body">Elsevier Scopus-indexed author profile. Papers indexed across IEEE, Springer, MDPI, Nature, Hindawi, and Taylor & Francis. Author of 75+ SCOPUS/SCI-indexed publications.</div><div class="media-meta">scopus.com · Elsevier · 2015 – Present</div><a href="https://www.scopus.com/authid/detail.uri?authorId=57212812452" target="_blank" class="media-link">Scopus ↗</a></div>
+    <div class="media-card"><div style="color:var(--gold)" class="media-cat">📋 Editorial Board</div><div class="media-title">Editorial Board Member — Multiple SCOPUS Journals</div><div class="media-body">IJSDR (IF: 5.47) · IJCRT (IF: 5.97) · IJRTI (IF: 4.87) · ETIR (ISSN: 2349-5162) · IJSCE (BEIESP, Scopus) · Chief Editor: IJEDR (IF: 5.67). Active reviewer for SCOPUS-indexed JCS (SJR: 0.3).</div><div class="media-meta">Multiple platforms · 2019 – Present</div><a href="#contact" class="media-link">Contact ↗</a></div>
+    <div class="media-card"><div style="color:var(--blue)" class="media-cat">💼 LinkedIn</div><div class="media-title">LinkedIn — 500+ Connections</div><div class="media-body">Active LinkedIn presence with 500+ professional connections. Research guides and journal ranking posts widely shared by academics and PhD scholars across India. Recommended by multiple Professors and Heads of Departments.</div><div class="media-meta">linkedin.com/in/ajayshriramkushwaha · 2016 – Present</div><a href="https://www.linkedin.com/in/ajayshriramkushwaha/" target="_blank" class="media-link">Connect ↗</a></div>
+    <div class="media-card"><div style="color:var(--red)" class="media-cat">📰 Print Media</div><div class="media-title">The Hitavada — Science & Technology Column Articles</div><div class="media-body">Multiple science and technology articles published in The Hitavada, one of the oldest English-language newspapers of Central India (Nagpur). Op-eds and awareness articles on emerging technology topics. "Connecting to the World" — Dec 2017; "MCA: Elite course in IT domain" — Hindustan Times Feb 2017.</div><div class="media-meta">The Hitavada · Nagpur · 2012 – 2017</div></div>
+    <div class="media-card"><div style="color:var(--gold)" class="media-cat">✍️ Peer Review</div><div class="media-title">Publons / Web of Science — Researcher Profile #1744716</div><div class="media-body">Active peer reviewer listed on Publons (now Web of Science Researcher Profile). Verified reviewer for journals in Computer Science, Cybersecurity, Blockchain, and AI/ML.</div><div class="media-meta">publons.com · Clarivate Analytics · Active</div><a href="https://publons.com/researcher/1744716/ajay-shriram-kushwaha/" target="_blank" class="media-link">Publons ↗</a></div>
+    <div class="media-card"><div style="color:var(--green)" class="media-cat">🌐 ORCID</div><div class="media-title">ORCID Profile — 0000-0003-0392-5546</div><div class="media-body">Verified ORCID researcher profile linking all publications, affiliations, and academic contributions across global databases and publisher platforms.</div><div class="media-meta">orcid.org · Active</div><a href="https://orcid.org/0000-0003-0392-5546" target="_blank" class="media-link">ORCID ↗</a></div>
+    <div class="media-card"><div style="color:#f97316" class="media-cat">🎤 Keynote / FDP</div><div class="media-title">56+ Expert Talks, Webinars & FDP Sessions (2020–2026)</div><div class="media-body">Resource Person for national FDPs by MMTTC (SLBSNS University), UGC-HRDC (Jodhpur, Madras), Presidency University (Bengaluru). Keynote at DST-SERB sponsored events, ICSSR seminars, and AI conferences across India. Special Judge: Hack O'Clock 2.0 (GDG, IILM University, Feb 2026).</div><div class="media-meta">National & International · 2020 – Present</div></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="sec-head">
+    <div class="sec-label">Peers · Students · Colleagues</div>
+    <h2 class="sec-title">What They Say</h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card"><p class="testi-body">Ajay is an outstanding professional with deep expertise in cyber security, ethical hacking, and digital forensics. His contributions have greatly enhanced our department's capabilities. He played a key role in handling NBA and NAAC processes, ensuring the highest standards of academic excellence. His meticulous approach and leadership in accreditation efforts were instrumental in achieving our goals.</p><div class="testi-name">Former Head of Department</div><div class="testi-role">HOD · Sharda University, Greater Noida · LinkedIn Recommendation</div></div>
+    <div class="testi-card"><p class="testi-body">Since the day I joined LPU, I found Dr. Ajay with new ideas and ways to teach. He really inspires me a lot. His way of explaining complex concepts makes them feel simple and achievable. A true mentor in every sense.</p><div class="testi-name">Student — MCA Program</div><div class="testi-role">Lovely Professional University · ajaykushwaha.in</div></div>
+    <div class="testi-card"><p class="testi-body">Ajay is one of the best students from graduation to PhD. He was very hardworking and dedicated toward his goals. His career trajectory since then has been nothing short of exceptional — from his first teaching role to becoming a Professor, Deputy HoD, and global researcher.</p><div class="testi-name">Dr. S. B. Kishor</div><div class="testi-role">Mentor · Gondwana University · ajaykushwaha.in</div></div>
+    <div class="testi-card"><p class="testi-body">His research in blockchain-based vaccine systems and federated learning demonstrates a rare ability to bridge theoretical depth with practical application. The 2026 Nature Scientific Reports paper is a landmark contribution to privacy-aware healthcare AI.</p><div class="testi-name">Research Community</div><div class="testi-role">Based on citation analysis · Nature Scientific Reports · 2026</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:var(--bg2)">
+  <div class="sec-head">
+    <div class="sec-label">Reach Out</div>
+    <h2 class="sec-title">Let's Connect</h2>
+    <p class="sec-sub">Open to collaboration, research partnerships, editorial opportunities, conference invitations, and speaking engagements worldwide.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="ci-card"><div class="ci-icon">🏛️</div><div><div class="ci-label">Current Institution</div><div class="ci-val">Sharda School of Computing Science & Engineering<br/>Sharda University, Greater Noida, UP — 201310</div></div></div>
+      <div class="ci-card"><div class="ci-icon">📧</div><div><div class="ci-label">University Email</div><div class="ci-val">ajay.kushwaha@sharda.ac.in</div></div></div>
+      <div class="ci-card"><div class="ci-icon">📧</div><div><div class="ci-label">Personal Email</div><div class="ci-val">kushwaha.ajay22@gmail.com</div></div></div>
+      <div class="ci-card"><div class="ci-icon">📞</div><div><div class="ci-label">Phone</div><div class="ci-val">+91 98900 54717 &nbsp;·&nbsp; +91 70204 86374</div></div></div>
+      <div class="ci-card"><div class="ci-icon">🌐</div><div><div class="ci-label">Website</div><div class="ci-val">ajaykushwaha.in</div></div></div>
+      <div class="ci-card"><div class="ci-icon">🎯</div><div><div class="ci-label">Open For</div><div class="ci-val">Research Collaboration · Keynote Speaking · PhD Co-Supervision · Editorial Roles · Guest Lectures · Industry Consulting</div></div></div>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/ajayshriramkushwaha/" target="_blank" class="sl">💼 LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=T8gf_W4AAAAJ" target="_blank" class="sl">🎓 Scholar</a>
+        <a href="https://www.researchgate.net/profile/Ajay-Kushwaha-8" target="_blank" class="sl">🔬 ResearchGate</a>
+        <a href="https://orcid.org/0000-0003-0392-5546" target="_blank" class="sl">🆔 ORCID</a>
+        <a href="https://ieeexplore.ieee.org/author/37086512000" target="_blank" class="sl">⚡ IEEE Xplore</a>
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=57212812452" target="_blank" class="sl">📊 Scopus</a>
+        <a href="https://publons.com/researcher/1744716/ajay-shriram-kushwaha/" target="_blank" class="sl">✍️ Publons</a>
+        <a href="https://twitter.com/drajayskushwaha" target="_blank" class="sl">🐦 Twitter</a>
+        <a href="https://youtube.com/techgyan5" target="_blank" class="sl">▶️ TechGyan</a>
+        <a href="https://dblp.org/pid/362/0470.html" target="_blank" class="sl">📑 DBLP</a>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3 style="font-size:1rem;margin-bottom:24px;color:var(--text)">📬 Send a Message <span style="font-size:.75rem;color:var(--text3);font-weight:400">· Response within 48 hours</span></h3>
+      <div class="form-row">
+        <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Your full name"/></div>
+        <div class="form-group"><label>Email Address *</label><input type="email" placeholder="you@example.com"/></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Organisation / Institution</label><input type="text" placeholder="University / Company"/></div>
+        <div class="form-group"><label>Subject *</label><select><option>— Select Purpose —</option><option>🔬 Research Collaboration</option><option>🎤 Conference / Keynote Invitation</option><option>🎓 PhD / Research Supervision</option><option>📰 Editorial / Review Request</option><option>💼 Industry Consulting</option><option>📚 Book / Publication Query</option><option>📝 Letter of Recommendation (LOR)</option><option>💬 General Enquiry</option></select></div>
+      </div>
+      <div class="form-group"><label>Message *</label><textarea placeholder="Describe your query, collaboration idea, or request..."></textarea></div>
+      <button class="btn btn-gold" style="width:100%;justify-content:center">✉ Send Message</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Prof. (Dr.) Ajay Shriram Kushwaha</div>
+  <div class="footer-role">Deputy HoD & Professor · Network & Cyber Security Expert · Blockchain Researcher · Patent Holder · Editor-in-Chief<br/>Sharda University, Greater Noida · India ◆ PhD (CS&IT) Nagpur University · M.E. CSE Annamalai University · Researching since 2008</div>
+  <div class="footer-links">
+    <a href="#dashboard">Metrics</a><a href="#timeline">Journey</a><a href="#research">Research</a><a href="#patents">Patents</a><a href="#copyright">Copyrights</a><a href="#books">Books</a><a href="#global">World</a><a href="#media">Media</a><a href="#contact">Contact</a>
+    <a href="https://www.linkedin.com/in/ajayshriramkushwaha/" target="_blank">LinkedIn</a>
+    <a href="https://scholar.google.com/citations?user=T8gf_W4AAAAJ" target="_blank">Google Scholar</a>
+    <a href="https://orcid.org/0000-0003-0392-5546" target="_blank">ORCID</a>
+    <a href="https://youtube.com/techgyan5" target="_blank">TechGyan</a>
+  </div>
+  <p class="footer-copy">Portfolio compiled from: sharda.ac.in · ajaykushwaha.in · researchgate.net · scholar.google.com · orcid.org · linkedin.com · publons.com · scopus.com · ieee.org · springer.com · sciencedirect.com · Indian Patent Office · UK IPO · <strong>Updated: October 2026</strong></p>
+</footer>
+
+<script>
+// Counter animation
+const counters=document.querySelectorAll('.counter');
+const ob=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const el=e.target,target=+el.dataset.target,dur=1800,step=target/dur*16;let cur=0;const t=setInterval(()=>{cur+=step;if(cur>=target){el.textContent=target+'+';clearInterval(t)}else{el.textContent=Math.floor(cur)}},16);ob.unobserve(el)}})},{threshold:.3});
+counters.forEach(c=>ob.observe(c));
+
+// Mobile nav
+document.querySelector('.nav-toggle').addEventListener('click',function(){const nl=document.querySelector('.nav-links');nl.style.display=nl.style.display==='flex'?'none':'flex';nl.style.flexDirection='column';nl.style.position='absolute';nl.style.top='101px';nl.style.left='0';nl.style.right='0';nl.style.background='rgba(10,10,15,.98)';nl.style.padding='20px';nl.style.borderBottom='1px solid #2a2a3a'});
+
+// Smooth active nav
+const sections=document.querySelectorAll('section[id]');
+const navLinks=document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',()=>{let cur='';sections.forEach(s=>{if(window.scrollY>=s.offsetTop-100)cur=s.getAttribute('id')});navLinks.forEach(a=>{a.style.color=a.getAttribute('href')==='#'+cur?'var(--gold)':'var(--text2)'})});
+</script>
+</body>
+</html>
